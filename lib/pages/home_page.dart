@@ -26,7 +26,7 @@ class _HomeState extends State<Home> {
               return ListView.builder(
                 itemCount: snapshot.data?.length,
                 itemBuilder: (context, index) {
-                  return Text(snapshot.data?[index]['nombre']);
+                  return Text(snapshot.data?[index]['nombre h']);
                 },
               );
             } else {
