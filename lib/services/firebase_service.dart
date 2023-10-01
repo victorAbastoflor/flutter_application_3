@@ -23,6 +23,15 @@ Future<List> getPersona() async {
   return person;
 }
 
+// Guardar un user y contraseña en base de datos
+Future<void> addUser(String username, String password, String role) async {
+  await db.collection("Usuario").add({
+    "Usuario": username,
+    "Contrasenia": password,
+    "tipoRol": role,
+  });
+}
+
 // Guardar un user en base de datos
 Future<void> addPeople(String name, String lastname, String last2name,
     String nit, String correo, String genero) async {

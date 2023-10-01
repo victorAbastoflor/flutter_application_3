@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 //importaciones de firebase
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_3/pages/add_user_page_client.dart';
 import 'package:flutter_application_3/pages/edit_user_page.dart';
 import 'firebase_options.dart';
 
 //pages
 import 'pages/add_user_page.dart';
 import 'pages/home_page.dart';
+import 'package:flutter_application_3/pages/register_user.dart';
 //import 'pages/edit_user_page.dart';
 
 void main() async {
@@ -26,8 +28,10 @@ class MyApp extends StatelessWidget {
       title: 'Material App',
       initialRoute: '/',
       routes: {
-        '/': (context) => const Home(),
+        '/': (context) => RegisterUser(),
+        '/menu': (context) => const Home(),
         '/add': (context) => const AddUserPage(),
+        '/addclient': (context) => const AddUserPageclient(),
         '/edit': (context) => const EditUserPage(),
       },
     );
