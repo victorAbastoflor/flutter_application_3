@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//importaciones de firebase
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_3/QRScreen.dart';
 
 import 'firebase_options.dart';
 import 'pages/home_page.dart';
@@ -14,13 +14,14 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'Material App',
-      home: Home(),
+      initialRoute: '/qr',
+      routes: {'/': (context) => Home(), '/qr': (context) => QRScreen()},
     );
   }
 }
