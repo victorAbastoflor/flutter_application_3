@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_3/QRScreen.dart';
 
+import 'Home.dart';
 import 'firebase_options.dart';
 import 'pages/home_page.dart';
 
@@ -20,8 +21,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
-      initialRoute: '/qr',
-      routes: {'/': (context) => Home(), '/qr': (context) => QRScreen()},
+      initialRoute: '/hm',
+      routes: {
+        '/': (context) => Home(),
+        '/qr': (context) => QRScreen(),
+        '/hm': (context) => MyHomePage(),
+      },
     );
   }
 }
