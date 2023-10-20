@@ -67,3 +67,34 @@ Future<void> updatePeople(String uid, String name, String lastname,
 Future<void> deletePeople(String uid) async {
   await db.collection("Persona").doc(uid).delete();
 }
+
+//lista de parqueos
+Future<List<Map<String, dynamic>>> getParqueos() async {
+  List<Map<String, dynamic>> parqueos = [];
+
+  try {
+    QuerySnapshot queryParqueos =
+        await FirebaseFirestore.instance.collection('parqueos').get();
+
+    queryParqueos.docs.forEach((documento) {
+      final Map<String, dynamic> data =
+          documento.data() as Map<String, dynamic>;
+      final parqueo = {
+        "latitud": data['latitud'],
+        "longitud": data['longitud'],
+        "nombre": data['nombre'],
+        "numPlazas": data['numplazas'],
+        "direccion": data['direccion'],
+        "TipoVehiculo": data['tipoVehiculo'],
+        "horaApertura": data['Hora.Apertura'],
+        // Puedes agregar otros datos relevantes
+        "uid": documento.id,
+      };
+      parqueos.add(parqueo);
+    });
+  } catch (error) {
+    print("Error al obtener parqueos: $error");
+  }
+
+  return parqueos;
+}
