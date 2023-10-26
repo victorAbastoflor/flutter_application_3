@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       theme: ThemeData.dark(useMaterial3: true),
-      initialRoute: '/',
+      initialRoute: '/menu',
       routes: {
         're': (context) => RegisterUser(),
         //'/': (context) => map_favorite(),
