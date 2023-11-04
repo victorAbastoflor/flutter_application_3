@@ -8,14 +8,16 @@ class QRScreen extends StatelessWidget {
   final TextEditingController placaController = TextEditingController();
   final TextEditingController horarioController = TextEditingController();
 
+  QRScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('RESERVAS'),
+        title: const Text('RESERVAS'),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage(
                 'assets/background.png'), // Reemplaza con tu imagen de fondo
@@ -25,81 +27,81 @@ class QRScreen extends StatelessWidget {
         child: Center(
           child: SingleChildScrollView(
             child: Container(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
+                  const Text(
                     'NOMBRE COMPLETO:',
                     style: TextStyle(fontSize: 18.0, color: Colors.white),
                   ),
                   TextFormField(
                     controller: nombreController,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors
                             .white), // Cambia el color del texto ingresado a blanco
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: '',
                       hintStyle: TextStyle(
                           color: Colors
                               .white), // Cambia el color del texto de sugerencia a blanco
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     'PLACA DE SU VEHÍCULO:',
                     style: TextStyle(fontSize: 18.0, color: Colors.white),
                   ),
                   TextFormField(
                     controller: placaController,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors
                             .white), // Cambia el color del texto ingresado a blanco
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: '',
                       hintStyle: TextStyle(
                           color: Colors
                               .white), // Cambia el color del texto de sugerencia a blanco
                     ),
                   ),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     'HORARIO DE LLEGADA Y SALIDA:',
                     style: TextStyle(fontSize: 18.0, color: Colors.white),
                   ),
                   TextFormField(
                     controller: horarioController,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Colors
                             .white), // Cambia el color del texto ingresado a blanco
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText: '',
                       hintStyle: TextStyle(
                           color: Colors
                               .white), // Cambia el color del texto de sugerencia a blanco
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Text(
+                  const SizedBox(height: 20),
+                  const Text(
                     'EL COSTO DE RESERVA ES DE Bs. 5',
                     style: TextStyle(
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   // Coloca aquí el widget del código QR (puede usar el QrImage del ejemplo anterior)
                   Container(
                     color: Colors.white,
-                    padding: EdgeInsets.all(20.0),
+                    padding: const EdgeInsets.all(20.0),
                     child: QrImageView(
                       data: qrData, // Reemplaza con tus datos
                       version: QrVersions.auto,
                       size: 200.0,
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () async {
                       // Obtén los valores de los campos de texto
@@ -138,21 +140,21 @@ class QRScreen extends StatelessWidget {
 
                         // Puedes mostrar un mensaje de éxito o redirigir al usuario a otra pantalla
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Reserva guardada con éxito')),
+                          const SnackBar(content: Text('Reserva guardada con éxito')),
                         );
                       } else {
                         // El código QR ya existe en la base de datos, muestra un mensaje de error
                         ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
+                          const SnackBar(
                               content: Text(
                                   'El código QR ya existe en la base de datos')),
                         );
                       }
                     },
-                    child: Text('Guardar Reserva'),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.red,
+                      backgroundColor: Colors.red,
                     ),
+                    child: const Text('Guardar Reserva'),
                   ),
                 ],
               ),

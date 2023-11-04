@@ -3,13 +3,15 @@ import 'package:flutter/material.dart';
 import 'FavoritesScreen.dart';
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/BackgroundF.png'),
                 fit: BoxFit.cover,
@@ -20,8 +22,8 @@ class MyHomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Container(
-                margin: EdgeInsets.fromLTRB(5, 16, 5, 16),
-                padding: EdgeInsets.all(5),
+                margin: const EdgeInsets.fromLTRB(5, 16, 5, 16),
+                padding: const EdgeInsets.all(5),
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.5),
                   borderRadius:
@@ -35,12 +37,12 @@ class MyHomePage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => FavoritesScreen()),
+                              builder: (context) => const FavoritesScreen()),
                         );
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black.withOpacity(0.5)),
-                      child: Column(
+                      child: const Column(
                         children: [
                           Icon(Icons.favorite_border, size: 48), // Icono grande
                           Text(
@@ -56,7 +58,7 @@ class MyHomePage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black.withOpacity(0.5)),
-                      child: Column(
+                      child: const Column(
                         children: [
                           Icon(Icons.map, size: 48), // Icono grande
                           Text(
@@ -72,7 +74,7 @@ class MyHomePage extends StatelessWidget {
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.black.withOpacity(0.5)),
-                      child: Column(
+                      child: const Column(
                         children: [
                           Icon(Icons.logout, size: 48), // Icono grande
                           Text(

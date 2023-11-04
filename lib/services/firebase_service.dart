@@ -6,9 +6,9 @@ Future<List> getPersona() async {
   List person = [];
   CollectionReference collectionReferencePersona = db.collection('Persona');
   QuerySnapshot queryPersona = await collectionReferencePersona.get();
-  queryPersona.docs.forEach((documento) {
+  for (var documento in queryPersona.docs) {
     person.add(documento.data());
-  });
+  }
   return person;
 }
 
@@ -17,8 +17,8 @@ Future<List> getFavorities() async {
   CollectionReference collectionReferenceFavorities =
       db.collection('Favorities');
   QuerySnapshot queryFavorities = await collectionReferenceFavorities.get();
-  queryFavorities.docs.forEach((documento) {
+  for (var documento in queryFavorities.docs) {
     favo.add(documento.data());
-  });
+  }
   return favo;
 }

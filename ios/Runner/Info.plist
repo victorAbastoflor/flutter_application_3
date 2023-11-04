@@ -45,5 +45,10 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>YOUR_API_KEY</key>
+	<string>AIzaSyA7ZS-Cs9kfi_8LH8xEX51xJ8CXcVSotXg</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Necesitamos acceder a tu ubicación para mostrar el mapa.</string>
+
 </dict>
 </plist>

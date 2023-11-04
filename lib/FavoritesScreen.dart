@@ -3,6 +3,8 @@ import 'package:flutter_application_3/services/firebase_service.dart';
 import 'Home.dart';
 
 class FavoritesScreen extends StatelessWidget {
+  const FavoritesScreen({Key? key}) : super(key: key);
+
   Future<List<Map<String, dynamic>>> fetchData() async {
     final data = await getFavorities(); // Llama a tu función asincrónica aquí
     return List<Map<String, dynamic>>.from(
@@ -13,12 +15,12 @@ class FavoritesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tus Favoritos'),
+        title: const Text('Tus Favoritos'),
       ),
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('assets/BackgroundF.png'),
                 fit: BoxFit.cover,
@@ -29,7 +31,7 @@ class FavoritesScreen extends StatelessWidget {
             future: fetchData(),
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return Center(
+                return const Center(
                   child: CircularProgressIndicator(),
                 );
               } else if (snapshot.hasError) {
@@ -37,7 +39,7 @@ class FavoritesScreen extends StatelessWidget {
                   child: Text('Error al cargar datos: ${snapshot.error}'),
                 );
               } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
-                return Center(
+                return const Center(
                   child: Text('No hay datos disponibles'),
                 );
               } else {
@@ -56,8 +58,8 @@ class FavoritesScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              margin: EdgeInsets.fromLTRB(5, 16, 5, 16),
-              padding: EdgeInsets.all(5),
+              margin: const EdgeInsets.fromLTRB(5, 16, 5, 16),
+              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.5),
                 borderRadius:
@@ -70,13 +72,13 @@ class FavoritesScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MyHomePage()),
+                        MaterialPageRoute(builder: (context) => const MyHomePage()),
                       );
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black.withOpacity(0.5),
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.favorite_border, size: 48), // Icono grande
                         Text(
@@ -93,7 +95,7 @@ class FavoritesScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black.withOpacity(0.5),
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.map, size: 48), // Icono grande
                         Text(
@@ -110,7 +112,7 @@ class FavoritesScreen extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.black.withOpacity(0.5),
                     ),
-                    child: Column(
+                    child: const Column(
                       children: [
                         Icon(Icons.logout, size: 48), // Icono grande
                         Text(
@@ -136,7 +138,7 @@ class FavoritesScreen extends StatelessWidget {
     return ListTile(
       title: Text(
         nombre,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white, // Color blanco
           fontWeight: FontWeight.bold, // Texto en negrita
           fontSize: 18, // Tamaño de fuente
