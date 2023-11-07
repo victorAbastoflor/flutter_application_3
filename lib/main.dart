@@ -2,6 +2,7 @@ import 'package:flutter_application_3/mapeo_user.dart';
 import 'package:flutter/material.dart';
 //importaciones de firebase
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_application_3/mapss.dart';
 
 import 'firebase_options.dart';
 import 'pages/home_page.dart';
@@ -35,11 +36,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       // Definir la ruta inicial
-      initialRoute: '/qr',
+      initialRoute: '/qra',
       // Definir las rutas de la aplicación
       routes: {
         '/': (context) => Home(),
         '/qr': (context) => MapView(),
+        '/qra': (context) => MapViewLoad(),
       },
     );
   }
