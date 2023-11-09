@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_3/Compo_model.dart';
 import 'package:flutter_application_3/DBparkeosRecord.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/services.dart' show ByteData, Uint8List, rootBundle;
 
 class MapViewLoad extends StatefulWidget {
   @override
@@ -24,7 +24,14 @@ class _MapViewState extends State<MapViewLoad> {
     _loadMarkersFromFirestore();
   }
 
-  void _loadMarkersFromFirestore() {
+  Future<BitmapDescriptor> _loadCustomMarkerIcon() async {
+    final ByteData data = await rootBundle.load('assets/house.png');
+    final Uint8List bytes = data.buffer.asUint8List();
+    return BitmapDescriptor.fromBytes(bytes);
+  }
+
+  Future<void> _loadMarkersFromFirestore() async {
+    final customIcon = await _loadCustomMarkerIcon();
     FirebaseFirestore.instance
         .collection('DBparkeos')
         .get()
@@ -32,12 +39,14 @@ class _MapViewState extends State<MapViewLoad> {
       querySnapshot.docs.forEach((doc) {
         final data = doc.data() as Map<String, dynamic>;
         final latitudlongitud = data['latitudlongitud'] as GeoPoint;
+
         setState(() {
           _markers.add(Marker(
             markerId: MarkerId(doc.id),
             position:
                 LatLng(latitudlongitud.latitude, latitudlongitud.longitude),
             draggable: true,
+            icon: customIcon,
             onTap: () {
               /*setState(() {
                 parkeoRecord = record; // Asigna el registro a parkeoRecord
