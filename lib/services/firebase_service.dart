@@ -11,3 +11,14 @@ Future<List> getPersona() async {
   });
   return person;
 }
+
+Future<List> getFavorities() async {
+  List favo = [];
+  CollectionReference collectionReferenceFavorities =
+      db.collection('Favorities');
+  QuerySnapshot queryFavorities = await collectionReferenceFavorities.get();
+  for (var documento in queryFavorities.docs) {
+    favo.add(documento.data());
+  }
+  return favo;
+}

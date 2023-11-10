@@ -1,3 +1,12 @@
+import 'package:flutter_application_3/View/LoginUp/ResetPass.dart';
+import 'package:flutter_application_3/View/LoginUp/but.dart';
+import 'package:flutter_application_3/View/LoginUp/login_view.dart';
+import 'package:flutter_application_3/View/Qr/QR_view.dart';
+import 'package:flutter_application_3/View/home/home_view.dart';
+import 'package:flutter_application_3/View/registro/registerClient_view.dart';
+import 'package:flutter_application_3/View/registro/registerOwner.dart';
+import 'package:flutter_application_3/View/registro/registerPark_view.dart';
+import 'package:flutter_application_3/View/screen/screen_view.dart';
 import 'package:flutter_application_3/mapeo_user.dart';
 import 'package:flutter/material.dart';
 //importaciones de firebase
@@ -36,12 +45,20 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       // Definir la ruta inicial
-      initialRoute: '/qra',
+      initialRoute: '/qraa',
       // Definir las rutas de la aplicación
       routes: {
         '/': (context) => Home(),
         '/qr': (context) => MapView(),
         '/qra': (context) => MapViewLoad(),
+        '/qraa': (context) => ScreenInit(),
+        '/qraaa': (context) => LoginWidget(),
+        '/qraaaa': (context) => RegisterClientWidget(),
+        '/qraaaaA': (context) => RegisterOwnerWidget(),
+        '/qraaaaAa': (context) => RegisterPark(),
+        '/qraaaaAao': (context) => ResetPasswordScreen(),
+        '/qraaaaAaoQ': (context) => QRScreen(),
+        '/qraaaaAaoQA': (context) => MyHomePage(),
       },
     );
   }
