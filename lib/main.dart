@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_application_3/View/LoginUp/ResetPass.dart';
 import 'package:flutter_application_3/View/LoginUp/but.dart';
 import 'package:flutter_application_3/View/LoginUp/login_view.dart';
@@ -12,6 +13,8 @@ import 'package:flutter/material.dart';
 //importaciones de firebase
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter_application_3/mapss.dart';
+import 'package:flutter_application_3/owner-all/owner_loginpage.dart';
+import 'package:flutter_application_3/owner-all/parking_details/RegisteredParkingPage.dart';
 
 import 'firebase_options.dart';
 import 'pages/home_page.dart';
@@ -45,7 +48,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Material App',
       // Definir la ruta inicial
-      initialRoute: '/qraa',
+      initialRoute: '/qra',
       // Definir las rutas de la aplicación
       routes: {
         '/': (context) => Home(),
