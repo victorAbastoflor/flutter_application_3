@@ -79,7 +79,8 @@ class MyApp extends StatelessWidget {
         '/qraaaaAa': (context) => RegisterPark(),
         '/qraaaaAao': (context) => ResetPasswordScreen(),
         '/qraaaaAaoQ': (context) => QRScreen(),
-        '/qraaaaAaoQA': (context) => MyHomePage(),
+        '/qraaaaAaoQA': (context) => MenuHomeWidget(),
+        '/qraaaaAaoQAq': (context) => ResetPasswordScreen(),
       },
     );
   }

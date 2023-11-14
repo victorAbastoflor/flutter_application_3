@@ -73,7 +73,7 @@ class FavoritesScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => const MyHomePage()),
+                            builder: (context) => const MenuHomeWidget()),
                       );
                     },
                     style: ElevatedButton.styleFrom(

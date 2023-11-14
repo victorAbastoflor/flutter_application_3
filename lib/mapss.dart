@@ -80,7 +80,7 @@ class _MapViewState extends State<MapViewLoad> {
           width: 350,
           height: 220,
           decoration: BoxDecoration(
-            color: Color(0x66000000),
+            color: Color.fromARGB(181, 0, 0, 0),
             borderRadius: BorderRadius.circular(30),
           ),
           child: Padding(
@@ -305,19 +305,8 @@ class _MapViewState extends State<MapViewLoad> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        title: Text('Parqueos', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.red,
-      ),
       body: Column(
         children: [
-          Text('Parqueos',
-              style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white)),
-          Text('Navega por el mapa y elige algún parqueo disponible',
-              style: TextStyle(fontSize: 16, color: Colors.white)),
           Expanded(
             child: Card(
               margin: EdgeInsets.all(8.0),
