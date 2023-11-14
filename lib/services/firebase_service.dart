@@ -12,6 +12,7 @@ Future<List> getPersona() async {
   return person;
 }
 
+// aqui optengo todo de la base de datos
 Future<List> getFavorities() async {
   List favo = [];
   CollectionReference collectionReferenceFavorities =

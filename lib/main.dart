@@ -4,6 +4,7 @@ import 'package:flutter_application_3/View/LoginUp/but.dart';
 import 'package:flutter_application_3/View/LoginUp/login_view.dart';
 import 'package:flutter_application_3/View/Qr/QR_view.dart';
 import 'package:flutter_application_3/View/home/home_view.dart';
+import 'package:flutter_application_3/View/model/Persona_model.dart';
 import 'package:flutter_application_3/View/registro/registerClient_view.dart';
 import 'package:flutter_application_3/View/registro/registerOwner.dart';
 import 'package:flutter_application_3/View/registro/registerPark_view.dart';
@@ -37,18 +38,31 @@ void main() async {
   );
 
   // Iniciar la aplicación
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final Persona persona = Persona(
+    apellidoMaterno: '',
+    apellidoPaterno: '',
+    carnetIdentidad: '',
+    contrasenia: '',
+    correoElectronico: '',
+    genero: '',
+    usuario: '',
+    nit: '',
+    nombre: '',
+    tipoRol: '',
+  );
+
+  MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Material App',
       // Definir la ruta inicial
-      initialRoute: '/qra',
+      initialRoute: '/qraaaaAaoQA',
       // Definir las rutas de la aplicación
       routes: {
         '/': (context) => Home(),
@@ -56,8 +70,12 @@ class MyApp extends StatelessWidget {
         '/qra': (context) => MapViewLoad(),
         '/qraa': (context) => ScreenInit(),
         '/qraaa': (context) => LoginWidget(),
-        '/qraaaa': (context) => RegisterClientWidget(),
-        '/qraaaaA': (context) => RegisterOwnerWidget(),
+        '/qraaaa': (context) => RegisterClientWidget(
+              persona: persona,
+            ),
+        '/qraaaaA': (context) => RegisterOwnerWidget(
+              persona: persona,
+            ),
         '/qraaaaAa': (context) => RegisterPark(),
         '/qraaaaAao': (context) => ResetPasswordScreen(),
         '/qraaaaAaoQ': (context) => QRScreen(),
