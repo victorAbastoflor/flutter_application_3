@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_3/View/home/favorites_view.dart';
+import 'package:flutter_application_3/View/registro/registerPark_view.dart';
+import 'package:flutter_application_3/View/screen/screen_view.dart';
 import 'package:flutter_application_3/mapss.dart';
 
 class MenuHomeWidget extends StatefulWidget {
@@ -48,19 +51,6 @@ class _MenuHomeWidgetState extends State<MenuHomeWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(15, 15, 0, 0),
-                        child: Icon(
-                          Icons.west,
-                          color: Color(0xFFFDFDFD),
-                          size: 40,
-                        ),
-                      ),
-                    ],
-                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(15, 0, 15, 0),
                     child: Container(
@@ -111,11 +101,31 @@ class _MenuHomeWidgetState extends State<MenuHomeWidget> {
   }
 
 // Método para mostrar el widget MapViewLoad en el contenedor al hacer clic en el icono de mapas
-  void _showMapViewLoadWidget() {
-    setState(() {
-      _currentWidget =
-          MapViewLoad(); // Reemplaza MapViewLoad() con tu widget correspondiente
-    });
+  void _showMapViewLoadWidget(String label) {
+    switch (label) {
+      case 'Mapas':
+        setState(() {
+          _currentWidget =
+              MapViewLoad(); // Reemplaza MapViewLoad() con tu widget correspondiente
+        });
+        break;
+      case 'Favorito':
+        setState(() {
+          _currentWidget =
+              FavoritesScreen(); // Reemplaza MapViewLoad() con tu widget correspondiente
+        });
+        break;
+      case 'Cerrar sesion':
+        setState(() {
+          _currentWidget =
+              ScreenInit(); // Reemplaza MapViewLoad() con tu widget correspondiente
+        });
+      case 'Agregar':
+        setState(() {
+          _currentWidget =
+              RegisterPark(); // Reemplaza MapViewLoad() con tu widget correspondiente
+        });
+    }
   }
 
   Widget _buildMenuColumn(IconData icon, String label) {
@@ -126,7 +136,14 @@ class _MenuHomeWidgetState extends State<MenuHomeWidget> {
         GestureDetector(
           onTap: () {
             if (label == 'Mapas') {
-              _showMapViewLoadWidget(); // Mostrar MapViewLoad al hacer clic en Mapas
+              _showMapViewLoadWidget(
+                  label); // Mostrar MapViewLoad al hacer clic en Mapas
+            } else if (label == 'Favorito') {
+              _showMapViewLoadWidget(label);
+            } else if (label == 'Agregar') {
+              _showMapViewLoadWidget(label);
+            } else if (label == 'Cerrar sesion') {
+              _showMapViewLoadWidget(label);
             }
             // Agregar lógica para otros íconos aquí si es necesario
           },

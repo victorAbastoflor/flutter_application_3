@@ -283,23 +283,6 @@ class _MapViewState extends State<MapViewLoad> {
       },
     );
   }
-  /*
-  void _showCustomWidget(DocumentSnapshot doc) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) {
-        return Container(
-          child: Column(
-            children: [
-              Text(
-                  doc['nombre']), // Personaliza el contenido según tu necesidad
-              // Agrega más widgets aquí según tus necesidades
-            ],
-          ),
-        );
-      },
-    );
-  }*/
 
   @override
   Widget build(BuildContext context) {

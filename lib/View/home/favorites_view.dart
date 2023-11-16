@@ -14,9 +14,6 @@ class FavoritesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tus Favoritos'),
-      ),
       body: Stack(
         children: [
           Container(
@@ -58,72 +55,10 @@ class FavoritesScreen extends StatelessWidget {
             left: 0,
             right: 0,
             child: Container(
-              margin: const EdgeInsets.fromLTRB(5, 16, 5, 16),
-              padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                 color: Colors.black.withOpacity(0.5),
                 borderRadius:
                     BorderRadius.circular(12.0), // Esquinas redondeadas
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const MenuHomeWidget()),
-                      );
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black.withOpacity(0.5),
-                    ),
-                    child: const Column(
-                      children: [
-                        Icon(Icons.favorite_border, size: 48), // Icono grande
-                        Text(
-                          'Favoritos',
-                          style: TextStyle(fontSize: 14), // Texto pequeño
-                        ),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Acción cuando se presiona el botón "Mapa"
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black.withOpacity(0.5),
-                    ),
-                    child: const Column(
-                      children: [
-                        Icon(Icons.map, size: 48), // Icono grande
-                        Text(
-                          'Mapa',
-                          style: TextStyle(fontSize: 14), // Texto pequeño
-                        ),
-                      ],
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Acción cuando se presiona el botón "Cerrar Sesión"
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.black.withOpacity(0.5),
-                    ),
-                    child: const Column(
-                      children: [
-                        Icon(Icons.logout, size: 48), // Icono grande
-                        Text(
-                          'Cerrar Sesión',
-                          style: TextStyle(fontSize: 14), // Texto pequeño
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
               ),
             ),
           ),
