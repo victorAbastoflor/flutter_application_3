@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "921977256566",
+    "project_id": "flutterparking-10886",
+    "storage_bucket": "flutterparking-10886.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921977256566:android:241ffdc071feda845b3d57",
+        "android_client_info": {
+          "package_name": "com.example.quickparking_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk506Y92futJ76pMX5_Plz9FCHK1ZZzNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
