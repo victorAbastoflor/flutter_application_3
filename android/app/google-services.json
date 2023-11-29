@@ -1,0 +1,162 @@
+{
+  "project_info": {
+    "project_number": "176310540848",
+    "project_id": "pri-parqueos-8eaba",
+    "storage_bucket": "pri-parqueos-8eaba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:0fa1fa527245ae62412bf5",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:a58a5aab9a2031bf412bf5",
+        "android_client_info": {
+          "package_name": "com.example.quickparking_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:295aa2dcb45cbadd412bf5",
+        "android_client_info": {
+          "package_name": "com.fasdfsaf"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:e10e4c546016d097412bf5",
+        "android_client_info": {
+          "package_name": "com.mycompany.maps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:404a85c17c6a1bc3412bf5",
+        "android_client_info": {
+          "package_name": "com.mycompany.mapsfluttermaps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:b375f4b33b4bf29b412bf5",
+        "android_client_info": {
+          "package_name": "com.mycompany.menu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:1de9c2fe8862a9b1412bf5",
+        "android_client_info": {
+          "package_name": "com.mycompany.parqueos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176310540848:android:9e3d8b934f8154c1412bf5",
+        "android_client_info": {
+          "package_name": "quinch.com.quick_park"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSVO3EwgCjKcadRZRkQCHCCdtGmtFJsik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

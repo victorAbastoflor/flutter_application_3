@@ -1,0 +1,31 @@
+buildscript {
+    ext.kotlin_version = '1.9.0' // Cambia esto a la versión correcta que necesitas
+    repositories {
+        google()
+        mavenCentral() // Utiliza solo mavenCentral, ya que jcenter está deprecado
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // Asegúrate de que esta versión de google-services es compatible con tus otras dependencias
+        classpath 'com.google.gms:google-services:4.4.0' 
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral() // JCenter está deprecado y ha sido eliminado
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+    project.evaluationDependsOn(':app')
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
