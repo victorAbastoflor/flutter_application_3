@@ -93,31 +93,32 @@ Credenciales:
 
 Detalle DETALLADO paso a paso de la puesta en marcha en hosting, tanto para el sitio Web, API, B.D., etc.etc. (incluir scripts BD, Credenciales de acceso server, root BD, Admin, users clientes etc.)
 
-7.	GIT : 
+7.	GIT :
+Link de Acceso al GIT del Proyecto: https://github.com/victorAbastoflor/flutter_application_3.git
 •	Versión final entregada del proyecto.
 •	Entrega compilados ejecutables
 
-8.	Personalización y configuración: Información sobre cómo personalizar y configurar el software según las necesidades del usuario, incluyendo opciones de configuración, parámetros y variables.
+9.	Personalización y configuración: Información sobre cómo personalizar y configurar el software según las necesidades del usuario, incluyendo opciones de configuración, parámetros y variables.
 No se necesita ninguna configuración extra, todo ya esta implementado, y el usuario y el cliente no puede cambiar ninguna configuración
 
-9.	Seguridad: Consideraciones de seguridad y recomendaciones para proteger el software y los datos, incluyendo permisos de acceso, autenticación y prácticas de seguridad recomendadas.
+10.	Seguridad: Consideraciones de seguridad y recomendaciones para proteger el software y los datos, incluyendo permisos de acceso, autenticación y prácticas de seguridad recomendadas.
 La seguridad del software y los datos son con las claves Token de FireBase, todo almacenamiento es en el Cloud de FireBase, lo que podemos recomendar es que los usuarios y los clientes no revelen sus credenciales como: nombre de usuario y contraseña a alguien desconocido 
 
-10.	Depuración y solución de problemas: Instrucciones sobre cómo identificar y solucionar problemas comunes, mensajes de error y posibles conflictos con otros sistemas o componentes.
+11.	Depuración y solución de problemas: Instrucciones sobre cómo identificar y solucionar problemas comunes, mensajes de error y posibles conflictos con otros sistemas o componentes.
 Si llegara a haber un problema en cualquier situación, el programa no hará las cosas que debería hacer, lo único que va a hacer es no hacer la transferencia o la carga de datos
 
 
-11.	Glosario de términos: Un glosario que incluya definiciones de términos técnicos y conceptos utilizados en el manual.
+12.	Glosario de términos: Un glosario que incluya definiciones de términos técnicos y conceptos utilizados en el manual.
 
-12.	Referencias y recursos adicionales: Enlaces o referencias a otros recursos útiles, como documentación técnica relacionada, tutoriales o foros de soporte.
+13.	Referencias y recursos adicionales: Enlaces o referencias a otros recursos útiles, como documentación técnica relacionada, tutoriales o foros de soporte.
 
-13.	Herramientas de Implementación:
+14.	Herramientas de Implementación:
 •	Lenguajes de programación: Dart
 •	Frameworks: Flutter Framework
 Firebase Authentication API: Para gestionar la autenticación de usuarios de manera segura.
 Firebase Cloud Firestore API: Para almacenar y recuperar datos en tiempo real, especialmente útil para la gestión de parqueos y reservas.
 
-14.	Bibliografía
+15.	Bibliografía
 
 Configuraciones del flutter
 https://firebase.flutter.dev/docs/overview/
