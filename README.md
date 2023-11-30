@@ -131,3 +131,6 @@ https://firebase.google.com/docs/flutter/setup?hl=es-419&platform=ios
 
 Guias para la programación en Dart
 https://www.udemy.com/course/programacion-en-dart/
+
+Grabación del Proyecto en Youtube
+https://youtu.be/sTPx6PNLrvk
