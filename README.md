@@ -97,3 +97,15 @@ Pasos para agregar firebase a la aplicación flutter:
 https://firebase.google.com/docs/flutter/setup?hl=es-419&platform=ios
 Guias para la programación en Dart:
 https://www.udemy.com/course/programacion-en-dart/
+
+
+Recursos:
+
+-Link del video de youtube: https://youtu.be/EPoL1CkXsyM
+
+-Link docker - imagen: https://hub.docker.com/r/salacor/priparqueo-android
+
+-Link del figma: https://www.figma.com/file/PP1YZHv0Lx07uBAj3gfwGZ/Figma---Paqueo-R?type=design&node-id=0%3A1&mode=design&t=DidqAr68frzlGz48-1
+
+-Link del repositorio Github: https://github.com/victorAbastoflor/flutter_application_3.git  (mainrenny) Rama de todo el proyecto.
+
